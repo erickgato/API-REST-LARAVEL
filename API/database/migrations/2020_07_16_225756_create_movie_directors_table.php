@@ -19,6 +19,7 @@ class CreateMovieDirectorsTable extends Migration
             $table->foreign('moviekey')->references('moviekey')->on('movies');
             $table->unsignedInteger('directorkey')->nullable();
             $table->foreign('directorkey')->references('directorkey')->on('directors');
+            $table->timestamps();
         });
     }
 

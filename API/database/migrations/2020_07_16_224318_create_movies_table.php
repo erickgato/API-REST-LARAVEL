@@ -20,6 +20,7 @@ class CreateMoviesTable extends Migration
             $table->string('description');
             $table->string('duration');
             $table->unsignedInteger('catekey')->nullable();
+            $table->timestamps();
            
         });
         Schema::table('movies', function (Blueprint $table) {

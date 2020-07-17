@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     protected $fillable = [
-        'lauchday','nacionality','description','duration','classifykey'
+        'launchday','nationality','description','duration','catekey'
     ];
 }

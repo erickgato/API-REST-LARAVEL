@@ -16,6 +16,7 @@ class CreateClassificationsTable extends Migration
         Schema::create('classifications', function (Blueprint $table) {
             $table->increments('clasifykey');
             $table->string('age');
+            $table->timestamps();
         });
     }
 
