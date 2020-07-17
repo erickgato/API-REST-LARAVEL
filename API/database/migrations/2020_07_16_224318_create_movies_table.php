@@ -19,7 +19,11 @@ class CreateMoviesTable extends Migration
             $table->string('nationality');
             $table->string('description');
             $table->string('duration');
-            $table->foreign('classfyfk')->references('clasifykey')->on('classifications');
+            $table->unsignedInteger('catekey')->nullable();
+           
+        });
+        Schema::table('movies', function (Blueprint $table) {
+            $table->foreign('catekey')->references('clasifykey')->on('classifications');
         });
     }
 

@@ -15,7 +15,9 @@ class CreateMovieDirectorsTable extends Migration
     {
         Schema::create('movie_directors', function (Blueprint $table) {
             $table->increments('MDkey');
+            $table->unsignedInteger('moviekey')->nullable();
             $table->foreign('moviekey')->references('moviekey')->on('movies');
+            $table->unsignedInteger('directorkey')->nullable();
             $table->foreign('directorkey')->references('directorkey')->on('directors');
         });
     }
